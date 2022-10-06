@@ -7424,9 +7424,88 @@ wait(DelayTime)
     end
    
 
+    if game.PlaceId == 2092166489 then
+     local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+     function GetAllGuns()
+        for __,v in ipairs(game:GetService("Workspace").Weapons:GetChildren()) do
+            v.Hitbox.CFrame = pl.CFrame
+        end
+      end
+      
+      function GetGun(gunName)
+        game.Workspace.Weapons[gunName].Hitbox.CFrame = pl.CFrame
+      end
+        local SurviveTB = Window:MakeTab({
+            Name = "Survive",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
 
+        local GunSC = SurviveTB:AddSection({
+            Name = "Guns"
+        })
+        for __,v in ipairs(game:GetService("Workspace").Weapons:GetChildren()) do
+            v.Hitbox.CanCollide = false
+            v.Hitbox.PointLight:Destroy()
+        end
+
+        getgenv().GunPicked = 'string'
+
+        GunSC:AddTextbox({
+            Name = "Pick Gun",
+            Default = "default box input",
+            TextDisappear = true,
+            Callback = function(Value)
+                getgenv().GunPicked = Value
+            end	  
+        })
+
+        GunSC:AddButton({
+            Name = "Get Gun",
+            Callback = function()
+                    GetGun(getgenv().GunPicked)
+                    Notify('Grabbed Gun, If possible')
+              end    
+        })
+        GunSC:AddButton({
+            Name = "Get All Guns",
+            Callback = function()
+                GetAllGuns()
+                Notify('Got all guns')
+              end    
+        })
+        
+     end
+
+     if game.PlaceId == 2248408710 then
+        getgenv().InfMoneyDS = 'string'
+         getgenv().AutoSellDS = 'string'
+        local DestroyTB = Window:MakeTab({
+            Name = "Destruction Sim",
+            Icon = "rbxassetid://4483345998",
+            PremiumOnly = false
+        })
+
+        local MoneySC = DestroyTB:AddSection({
+            Name = "Money"
+        })
+
+        MoneySC:AddToggle({
+            Name = "Infinite Money",
+            Default = false,
+            Callback = function(Value)
+                getgenv().InfMoneyDS = Value
+            end    
+        })
+        MoneySC:AddToggle({
+            Name = "Auto Sell",
+            Default = false,
+            Callback = function(Value)
+                getgenv().AutoSellDS = Value
+            end    
+        })
  
-
+    end
     
 
 
@@ -8385,6 +8464,17 @@ game:GetService("ReplicatedStorage").Functions.Upgrade:InvokeServer(unpack(args)
         
         if getgenv().AutoUpgradeBRN == true then
         game:GetService("ReplicatedStorage").Remotes.UpgradeCapacity:FireServer()
+        end
+
+        if getgenv().InfMoneyDS == true then 
+            game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Coins",48000000,10000000)
+            wait(0.1)
+        end
+
+        if getgenv().AutoSellDS == true then
+            local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+
+pl.CFrame = CFrame.new(-36, 6, -496)
         end
 
 

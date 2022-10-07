@@ -7451,14 +7451,15 @@ wait(DelayTime)
 
         getgenv().GunPicked = 'string'
 
-        GunSC:AddTextbox({
-            Name = "Pick Gun",
-            Default = "default box input",
-            TextDisappear = true,
+        GunSC:AddDropdown({
+            Name = "Pick A Gun",
+            Default = "",
+            Options = {"AWP", "M1014", "M14", "Desert Eagle", "M4A1", "R870", "RayGun", "MP5k", "AK-47", "DB Shotgun", "AN-94", "G36C", "M16A2/M203", "P90", "SVD"},
             Callback = function(Value)
                 getgenv().GunPicked = Value
-            end	  
+            end    
         })
+        
 
         GunSC:AddButton({
             Name = "Get Gun",
@@ -7975,7 +7976,7 @@ Notify("This feature has been down, Because of major bugs.")
         Name = "Field Of View",
         Min = 0,
         Max = 120,
-        Default = 70,
+        Default = 90,
         Color = Color3.fromRGB(56, 181, 77),
         Increment = 1,
         ValueName = "FOV",

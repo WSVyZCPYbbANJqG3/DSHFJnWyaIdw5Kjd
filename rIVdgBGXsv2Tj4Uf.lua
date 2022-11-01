@@ -8237,7 +8237,7 @@ game.Players.LocalPlayer:Kick('Returned false. Address : '..getgenv().Address)
 wait(math.huge)
 ]]
 -- Main Point
-main()
+error("Nucleon has bumped into an issue! This is an auto-generated message by Nucleon, Make sure the developers know about this issue.")
 
 
 

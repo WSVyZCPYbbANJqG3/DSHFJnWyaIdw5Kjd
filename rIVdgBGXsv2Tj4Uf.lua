@@ -8236,7 +8236,7 @@ end
 game.Players.LocalPlayer:Kick('Returned false. Address : '..getgenv().Address)
 wait(math.huge)
 ]]
-
+-- Main Point
 main()
 
 

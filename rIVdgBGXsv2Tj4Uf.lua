@@ -5776,6 +5776,7 @@ function Notify(text)
 end
 
 
+
     HomeTB:AddLabel("Welcome, ".. game.Players.LocalPlayer.Name)
     HomeTB:AddLabel("By Zyllus#4719")
 
@@ -8206,8 +8207,8 @@ end
 game.Players.LocalPlayer:Kick('Returned false. Address : '..getgenv().Address)
 wait(math.huge)
 ]]
-
-main()
+rconsolename("Nucleon V1")
+rconsoleerr("Nucleon has bumped into an issue!, This is an auto-generated message so make sure you make the owner aware of this problem. Please be patient as our developers fix this issue. Thanks, - Nucleon Auto-Generatornigger")
 
 
 

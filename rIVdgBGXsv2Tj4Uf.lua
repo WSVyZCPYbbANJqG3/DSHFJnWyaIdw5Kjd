@@ -5690,66 +5690,66 @@ function forest()
     local ohCFrame1 = CFrame.new(-163.984467, 987.596497, -403.339417, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
-    function flower()
+end
+function flower()
     
     local ohCFrame1 = CFrame.new(-179.51564, 1524.63098, -682.498718, -1, 0, -0, -0, 1, -0, -0, 0, -1)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
-    function swamp()
+end
+function swamp()
     
     local ohCFrame1 = CFrame.new(-264.358887, 2123.06299, -694.661316, -1, 0, -0, -0, 1, -0, -0, 0, -1)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
-    function snow()
+end
+function snow()
     
     local ohCFrame1 = CFrame.new(-201.771973, 2944.48169, -470.408752, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
-    function desert()
+end
+function desert()
     
     local ohCFrame1 = CFrame.new(-166.285156, 4235.38916, -779.153137, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
-    function death()
+end
+function death()
     
     local ohCFrame1 = CFrame.new(-276.201263, 5425.62158, -480.287781, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
-    function beach()
+end
+function beach()
     
     local ohCFrame1 = CFrame.new(-140.345093, 6881.63086, -495.682129, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
-    function mines()
+end
+function mines()
     
     local ohCFrame1 = CFrame.new(-243.258667, 8376.5166, -483.889771, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
     end
-    function cloud()
+function cloud()
     
     local ohCFrame1 = CFrame.new(-253.303482, 11262.8818, -237.888596, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
-    function coral()
+end
+function coral()
     
     local ohCFrame1 = CFrame.new(-511.021118, 13812.0322, -543.241821, 0, 0, -1, 0, 1, -0, 1, 0, -0)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
-    function darkmatter()
+end
+function darkmatter()
     local ohCFrame1 = CFrame.new(-408.69751, 17180.1387, -552.046448, 0, 0, 1, 0, 1, 0, -1, 0, 0)
     
     game:GetService("ReplicatedStorage").Events.Teleport:FireServer(ohCFrame1)
-    end
+end
     
     
 
@@ -5774,7 +5774,6 @@ function Notify(text)
         Time = 6.9
     })
 end
-
 
 
     HomeTB:AddLabel("Welcome, ".. game.Players.LocalPlayer.Name)
@@ -8111,8 +8110,38 @@ end
         
           end    
     })
+
+    local FakeMSGSC = MiscTB:AddSection({
+        Name = "Fake Message Box"
+    })
+    getgenv().MsgTitle = 'string'
+    getgenv().MsgDesc = 'string'
+    FakeMSGSC:AddTextbox({
+        Name = "Message Title",
+        Default = "Title",
+        TextDisappear = true,
+        Callback = function(Value)
+            getgenv().MsgTitle = Value
+        end	  
+    })
+    FakeMSGSC:AddTextbox({
+        Name = "Message Description",
+        Default = "Description",
+        TextDisappear = true,
+        Callback = function(Value)
+            getgenv().MsgDesc = Value
+        end	  
+    })
+    FakeMSGSC:AddButton({
+        Name = "Compile",
+        Callback = function()
+            messagebox(getgenv().MsgDesc, getgenv().MsgTitle, 1)
+          end    
+    })
+
+
     MiscSC:AddButton({
-        Name = "Copy Rbx HWID",
+        Name = "Copy JobID",
         Callback = function()
             Notify("Your Rbx HWID is = "..getgenv().RbxHWID)
             setclipboard(tostring(getgenv().RbxHWID))
@@ -8207,9 +8236,8 @@ end
 game.Players.LocalPlayer:Kick('Returned false. Address : '..getgenv().Address)
 wait(math.huge)
 ]]
---Main Point
-main()
 
+main()
 
 
 

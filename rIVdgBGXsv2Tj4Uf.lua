@@ -8208,11 +8208,8 @@ game.Players.LocalPlayer:Kick('Returned false. Address : '..getgenv().Address)
 wait(math.huge)
 ]]
 --Main Point
-rconsolename("Nucleon V1")
-rconsoleerr("Nucleon has bumped into an issue!, )
-rconsoleerr("This is an auto-generated message so make sure you make the owner aware of this problem."
-rconsoleerr("Please be patient as our developers fix this issue. Thanks, "
-rconsoleerr("- Nucleon Auto-Generatornigger")
+main()
+
 
 
 

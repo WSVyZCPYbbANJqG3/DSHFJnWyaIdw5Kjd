@@ -8236,13 +8236,78 @@ game.Players.LocalPlayer:Kick('Returned false. Address : '..getgenv().Address)
 wait(math.huge)
 ]]
 -- Main Point
-error("Nucleon has bumped into an issue! This is an auto-generated message by Nucleon, Make sure the developers are aware about this issue.")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local NucleonError = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+NucleonError.Name = "Nucleon-Error"
+NucleonError.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NucleonError.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = NucleonError
+Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame.Position = UDim2.new(0.458893418, 0, 0.33912614, 0)
+Frame.Size = UDim2.new(0, 419, 0, 259)
+
+UICorner.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0262529831, 0, 0.0849420875, 0)
+TextLabel.Size = UDim2.new(0, 397, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Nucleon is unable to load..."
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 25.000
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.357995212, 0, 0.463320464, 0)
+TextLabel_2.Rotation = 90.000
+TextLabel_2.Size = UDim2.new(0, 133, 0, 17)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = ":("
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 100.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextButton.Position = UDim2.new(0.260143191, 0, 0.710424721, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Close"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 20.000
+
+UICorner_2.Parent = TextButton
+
+-- Scripts:
+
+local function YNIF_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(YNIF_fake_script)()
 
 
 
 
-wait(0.5)
-rconsoleclose()
 
 while wait() do
     if getgenv().AutoWin == true then

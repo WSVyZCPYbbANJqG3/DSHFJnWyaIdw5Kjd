@@ -5779,6 +5779,7 @@ end
     HomeTB:AddLabel("By Zyllus#4719")
 
     HomeTB:AddLabel("Your exploit - "..identifyexecutor())
+    HomeTB:AddParagraph("Nucleon Stable Programme", "We have noticed that Nucleon V1 (this) has been very unstable lately, Me (Zyllus) will try and fix most of Nucleon errors, If you want to help out, Please dm us whenever you get an issue that is related to Nucleon (You have to be sure). We will make Nucleon very stable soon.")
     HomeTB:AddParagraph("Supported Games","Universal, Build A Boat, Tapping Sim, Break In Story, Big paintball, Oof Tycoon")
     HomeTB:AddParagraph("Discord","We'd be glad to have you in our Discord Server! You can view changelogs, etc, Need support, Just create a ticket!, We also give free key roles, (For respected people). ")
     

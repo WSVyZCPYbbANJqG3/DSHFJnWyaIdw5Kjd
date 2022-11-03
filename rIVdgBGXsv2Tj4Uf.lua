@@ -8237,6 +8237,7 @@ game.Players.LocalPlayer:Kick('Returned false. Address : '..getgenv().Address)
 wait(math.huge)
 ]]
 -- Main Point
+PlayAnimation("Zyllusware V2")
 main()
 
 

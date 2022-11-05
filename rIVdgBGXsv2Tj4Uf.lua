@@ -8223,7 +8223,7 @@ end
 
         
 
-    
+    Notify("Enjoy Keyless Nucleon V1")
 end
 
 wait(0.5)

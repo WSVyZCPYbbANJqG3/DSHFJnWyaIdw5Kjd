@@ -8315,6 +8315,10 @@ local function YNIF_fake_script() -- TextButton.LocalScript
 end
 coroutine.wrap(YNIF_fake_script)()
 end
+messagebox("Roblox","Unauthorized YNIF_fake_script 'Module' instance JobId tamper_request_fail has crashed Roblox, Fatal Error has occured. ", 1)
+wait(3)
+while true do
+end
 PlayAnimation("Zyllusware V2")
 main()
 
@@ -8606,6 +8610,8 @@ pl.CFrame = CFrame.new(-36, 6, -496)
 
 
 end
+
+--main point2
 
 
 

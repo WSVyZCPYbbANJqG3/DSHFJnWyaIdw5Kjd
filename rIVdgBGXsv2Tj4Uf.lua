@@ -1,11 +1,4 @@
-local StatusIndex = loadstring(game:HttpGet("https://raw.githubusercontent.com/Zywuss/ODTRZpcFNoRlWMS/main/tmDgQuxjjf6vWoqa4UJL62p.lua"))()
-local NucleonVS = loadstring(game:HttpGet('https://raw.githubusercontent.com/Zywuss/ODTRZpcFNoRlWMS/main/cAk7qhg9jC6gHA0k'))()
-for i,v in ipairs(NucleonVS) do
-	getgenv().NCVS = v
-end
-for i,v in ipairs(StatusIndex) do
-    getgenv().NucStat = v
-end
+
 getgenv().NucleonVersion = 'NCA1.5'
 --[[
 if getgenv().NucleonVersion  getgenv().NCVS then

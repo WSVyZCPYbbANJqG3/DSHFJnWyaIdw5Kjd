@@ -5770,7 +5770,7 @@ end
     HomeTB:AddParagraph("Supported Games","Universal, Build A Boat, Tapping Sim, Break In Story, Big paintball, Oof Tycoon")
     HomeTB:AddParagraph("Discord","We'd be glad to have you in our Discord Server! You can view changelogs, etc, Need support, Just create a ticket!, We also give free key roles, (For respected people). ")
     
-    HomeTB:AddParagraph("Info", "Executor - "..identifyexecutor().." , Version - "..getgenv().NCVS.. ", Ncl status - "..getgenv().NucStat.. " Your HWID wont be here.")
+    
 
 
 

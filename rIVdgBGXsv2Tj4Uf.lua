@@ -1,10 +1,4 @@
 
-getgenv().NucleonVersion = 'NCA1.5'
---[[
-if getgenv().NucleonVersion  getgenv().NCVS then
-    game.Players.LocalPlayer:Kick('Outdated version.')
-end
-]]
 
 
 
@@ -5748,6 +5742,7 @@ end
 
 
 
+print("457234123346")
 function main()
     local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
@@ -5772,16 +5767,6 @@ end
     HomeTB:AddLabel("By Zyllus#4719")
 
     HomeTB:AddLabel("Your exploit - "..identifyexecutor())
-    HomeTB:AddParagraph("Nucleon V3 Beta", "Would you like to update to Nucleon V3 Beta, Nucleon V1 will be terminated after a week! Nucleon V3 uses a much better Library and has a GUI key system! Press the button below to Update!")
-    HomeTB:AddButton({
-	Name = "Update",
-	Callback = function()
-      		Notify("Sorry, You are not compatible for Nucleon V3 Beta.")
-  	end    
-     })
-
-
-    HomeTB:AddParagraph("Nucleon Stable Programme", "We have noticed that Nucleon V1 (this) has been very unstable lately, Me (Zyllus) will try and fix most of Nucleon errors, If you want to help out, Please dm us whenever you get an issue that is related to Nucleon (You have to be sure). We will make Nucleon very stable soon.")
     HomeTB:AddParagraph("Supported Games","Universal, Build A Boat, Tapping Sim, Break In Story, Big paintball, Oof Tycoon")
     HomeTB:AddParagraph("Discord","We'd be glad to have you in our Discord Server! You can view changelogs, etc, Need support, Just create a ticket!, We also give free key roles, (For respected people). ")
     
@@ -5999,9 +5984,7 @@ getgenv().SafeModeBAB = 'string'
             Options = {"Forest", "Flower", "Swamp", "Snow", "Desert", "Death", "Beach", "Mines", "Clouds", "Coral", "Dark Matter"},
             Callback = function(Value)
                 selectedIsland = Value
-            end    
-
-            
+            end             
         })
         IsleSC:AddButton({
             Name = "Go to Island",
@@ -6049,7 +6032,7 @@ getgenv().SafeModeBAB = 'string'
             local ItemName = item
             
             game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ItemName)
-            end
+        end
 
         local MainTB = Window:MakeTab({
             Icon = "rbxassetid://4483345998",
@@ -6080,12 +6063,12 @@ getgenv().SafeModeBAB = 'string'
                     local ohString1 = "Cat"
                     
                     game:GetService("ReplicatedStorage").RemoteEvents.Energy:FireServer(ohString1)
-                              end
+                end
               end    
         })
         MainSC:AddBind({
-            Name = "Inf Energy Keybind",
-            Default = Enum.KeyCode.P,
+            Name = "Inf  Keybind",
+            Default = EnuEnergym.KeyCode.P,
             Hold = false,
             Callback = function()
         
@@ -8085,30 +8068,7 @@ ts:Teleport(game.PlaceId, p)
         Name = "Anti-Kick",
         Callback = function()
 
-local Players = game:GetService("Players")
-local OldNameCall = nil
 
-
-getgenv().SendNotifications = true 
-
-
-OldNameCall = hookmetamethod(game, "__namecall", function(Self, ...)
-    local NameCallMethod = getnamecallmethod()
-
-    if tostring(string.lower(NameCallMethod)) == "kick" then
-        if getgenv().SendNotifications == true then
-            Notify("Kick Prevented!")
-        end
-        
-        return nil
-    end
-    
-    return OldNameCall(Self, ...)
-end)
-
-if getgenv().SendNotifications == true then
-    Notify("Anti-Kick enabled")
-end
         
           end    
     })
@@ -8225,7 +8185,7 @@ end
 
         
 
-    Notify("Enjoy Keyless Nucleon V1")
+    
 end
 
 wait(0.5)
@@ -8238,86 +8198,14 @@ end
 game.Players.LocalPlayer:Kick('Returned false. Address : '..getgenv().Address)
 wait(math.huge)
 ]]
--- Main Point
-function ErrorGUI()
 
-
--- Instances:
-
-local NucleonError = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-
---Properties:
-
-NucleonError.Name = "Nucleon-Error"
-NucleonError.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-NucleonError.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = NucleonError
-Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-Frame.Position = UDim2.new(0.458893418, 0, 0.33912614, 0)
-Frame.Size = UDim2.new(0, 419, 0, 259)
-
-UICorner.Parent = Frame
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.0262529831, 0, 0.0849420875, 0)
-TextLabel.Size = UDim2.new(0, 397, 0, 50)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Nucleon is unable to load..."
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 25.000
-
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Position = UDim2.new(0.357995212, 0, 0.463320464, 0)
-TextLabel_2.Rotation = 90.000
-TextLabel_2.Size = UDim2.new(0, 133, 0, 17)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = ":("
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextSize = 100.000
-
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-TextButton.Position = UDim2.new(0.260143191, 0, 0.710424721, 0)
-TextButton.Size = UDim2.new(0, 200, 0, 50)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Close"
-TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.TextSize = 20.000
-
-UICorner_2.Parent = TextButton
-
--- Scripts:
-
-local function YNIF_fake_script() -- TextButton.LocalScript 
-	local script = Instance.new('LocalScript', TextButton)
-
-	script.Parent.MouseButton1Down:Connect(function()
-		script.Parent.Parent.Parent:Destroy()
-	end)
-end
-coroutine.wrap(YNIF_fake_script)()
-end
-messagebox("Roblox","Unauthorized YNIF_fake_script 'Module' instance JobId tamper_request_fail has crashed Roblox, Fatal Error has occured. ", 1)
-wait(3)
-while true do
-end
-PlayAnimation("Zyllusware V2")
 main()
 
 
 
 
+wait(0.5)
+rconsoleclose()
 
 while wait() do
     if getgenv().AutoWin == true then
@@ -8603,8 +8491,6 @@ pl.CFrame = CFrame.new(-36, 6, -496)
 
 
 end
-
---main point2
 
 
 
